@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tunes_player/views/home_page.dart';
+import 'package:tunes_player/views/tune_view.dart';
 
 void main() {
   runApp(const MyApp());

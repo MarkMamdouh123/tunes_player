@@ -1,22 +1,21 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:tunes_player/tune_model.dart';
 
 class TuneItem extends StatelessWidget {
-  final Color color;
-  final String tune;
+  final TuneModel tuneModel;
 
-  const TuneItem({super.key, required this.color, required this.tune});
+  const TuneItem({super.key, required this.tuneModel});
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: GestureDetector(
         onTap: () {
-          final player = AudioPlayer();
-          player.play(AssetSource(tune));
+          tuneModel.playTune();
         },
         child: Container(
-          color: color,
+          color: tuneModel.color,
         ),
       ),
     );
